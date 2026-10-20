@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="/assets/css/home1/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="sucess_modal" id="sucess_modal">
+    <div class="check_icon">
+      <i class="fa-solid  check"></i>
+    </div>
+    <div class="sucess_changes">
+      <div class="sucess_head">
+        <h2 id="success">Success</h2>
+        <i class="fa-solid fa-xmark cross_mark" id="cross_mark"></i>
+      </div>
+      <span id="mess_saved">Your changes has been saved </span>
+    </div>
+    <div class="progress"></div>
+  </div>
+
+  <div class="profile-container" style="height: 70px;">
+    <nav class="navbar">
+      <div class="navbar_container">
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="bandage">
+          <div class="logo"><a href="index.html">Bandage</a></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+        
+          <li><a href="/pages/product/index.html">product</a></li>
+        </ul>
+        <div class="nav-icons">
+          <div class="search_icon">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            <input class="search-input  " placeholder="Search..." type="text" id="productSearch" style="display: none;">
+          </div>
+          <div class="cart_icon">
+              <a href="/pages/cart/index.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          <i class="fa-solid fa-user" id="profilepic" style="cursor: pointer;"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ....signup.... -->
+
+    <div class="my_profile" id="my_profile" style="visibility: hidden; opacity: 0;">
+      <div class="main_sctn" id="main_sctn_profile" style=" transform: translateY(-50px);">
+
+        <div class="user-id">
+          <div class="acount_main" id="acount_main">
+            <div class="user" id="profilediv">
+              <div class="cross_icon">
+                <h6 id="loginusername" class="hlo">Hello User</h6>
+                <i  id="crossSignup" class="fa-solid fa-xmark"></i>
+              </div>
+              <p class="access">To access you account</p>
+            </div>
+            <div class="log-btn" id="log_btn" data-action="login">
+              <button id="signup">login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my_profile2" id="my_profile2" style="visibility: hidden; opacity: 0;">
+      <div class="main_sctn" id="main_sctn_signup" style=" transform: translateY(-50px);"></div>
+      <div class="signup-modal" id="signupModal">
+        <div class="signup-box" id="signupbox">
+          <span class="crossbtn" id="crossSignup"> <i class="fa-solid fa-xmark"></i></span>
+          <div class="started">
+            <h2>creat account</h2>
+            <p>join us and get started</p>
+          </div>
+          <form id="loginup_form">
+            <div class="form_item">
+              <input type="text" placeholder="Email" id="Username">
+              <input type="password" placeholder="Password" id="Password">
+              <div class="log_btn" id="log_btn" data-action="login">
+                <button type="submit">login</button>
+              </div>
+              <div class="already">
+                <p>already have an account? <a id="loginLink" style="text-decoration: none;" href="">sign in</a>
+                </p>
+              </div>
+              <div class="google">
+                <button>google</button>
+                <button>facebook</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my_profile_login" id="signUp_modal" style="visibility: hidden; opacity: 0;">
+    <div class="main_sctn">
+      <div class="signup-modal2" id="signupModal2">
+        <div class="signup-box2" id="signupbox">
+          <span class="cross_icon2" id="closeSignup"> <i class="fa-solid fa-xmark"></i></span>
+          <div class="started2">
+            <h2>create account</h2>
+            <p>join us and get started</p>
+          </div>
+          <form id="signup_form">
+            <div class="form_item2">
+              <!-- <input type="text" placeholder="Full Name" id="loginname"> -->
+              <input type="text" placeholder="Full Name" id="Full_Name">
+              <input type="email" placeholder="Email" id="loginemail">
+              <input type="password" placeholder="Password" id="loginpassword">
+              <button type="submit">sign</button>
+              <div class="already2">
+                <p>already have an account? <a id="Signuplink" style="text-decoration: none;" href="">login in</a></p>
+              </div>
+              <div class="google2">
+                <button>google</button>
+                <button>facebook</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="loader" style="display:none; position:fixed; ">
+    <div class="loader-dots">
+      <div class="dot" style="animation-delay: 0s"></div>
+      <div class="dot" style="animation-delay: 0.1s"></div>
+      <div class="dot" style="animation-delay: 0.2s"></div>
+      <div class="dot" style="animation-delay: 0.3s"></div>
+      <div class="dot" style="animation-delay: 0.4s"></div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container" id="container" style="margin: 1px;">
+  </div>
+
+  <div class="icon-row">
+    <img src="assets/image/download (1).png" alt="">
+    <img src="assets/image/download (7).png" alt="">
+    <img src="assets/image/download (4).png" alt="">
+    <img src="assets/image/download (5).png" alt="">
+    <img src="assets/image/download (6).png" alt="">
+  </div>
+
+  <div class="three-image-layout">
+    <div class="image-card large-image">
+      <img src="assets/image/Screenshot 2025-09-23 201331.png" alt="Left Image">
+      <div class="content-box">
+        <h2>Top Product Of the Week</h2>
+        <button>EXPLORE ITEMS</button>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="image-card">
+        <img src="assets/image/Screenshot 2025-09-23 201545.png" alt="Top Right Image">
+        <div class="content-box">
+          <h2>Top Product Of the Week</h2>
+          <button>EXPLORE ITEMS</button>
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="assets/image/Screenshot 2025-09-23 201740.png" alt="Bottom Right Image">
+        <div class="content-box">
+          <h2>Top Product Of the Week</h2>
+          <button>EXPLORE ITEMS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main_3">
+    <div class="selling">
+      <h6 class="product">Featured Products</h6>
+      <h5 class="sell">BESTSELLER PRODUCTS</h5>
+      <p class="resolve">Problems try to resolve the conflict between</p>
+    </div>
+    <div class="container_4" id="container_4">
+
+    </div>
+    <div class="load">
+      <button>Load More</button>
+    </div>
+  </div>
+  <!-- ....five section.... -->
+  <div class="row-container-1">
+    <div class="pair-images">
+      <img src="assets/image/OIP (1).jpg" alt="Image 1">
+      <!-- <img src="image/OIP.jpg" alt="Image 2"> -->
+    </div>
+    <div class="text-content">
+      <h2>Feature Product</h2>
+      <h3>What Love Do This</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Blanditiis soluta ex cumque earum ratione totam
+        <br>expedita architecto laboriosam perferendis quas.
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Blanditiis soluta ex cumque earum ratione totamn
+        <br> expedita architecto laboriosam perferendis quas.
+      </p>
+    </div>
+  </div>
+  <div class="t-shirt_product">
+    <div class="header-container">
+      <div class="title">
+        <div>XIV</div>
+        <div>COLLECTIONS</div>
+        <div>23-24</div>
+      </div>
+      <div class="filter_sort">
+        <div class="main_content_filter">
+          <div class="filter">Filters(+)</div>
+          <div class="sort">Sorts(.)</div>
+        </div>
+        <div class="less_content-more">
+          <div>Less to more</div>
+          <div>More to Less</div> 
+        </div>
+      </div>
+      <div class="product_name">
+        <div class="all">(ALL)</div>
+        <div>Men</div>
+        <div>Women</div>
+        <div>KID</div>
+      </div>
+    </div>
+    <div class="tshirt_item">
+      <div class="tshirt_card_1">
+        <img src="assets/image/tshirt_hs_men_pat_d48_o-removebg-preview.png" alt="">
+        <div class="infor">
+          <div class="information_div">
+            <h6 class="Grapic_design"> Cotton T-Shirt</h6>
+            <h2 class="english_dep">Basic Heavy Weight T-Shirt</h2>
+          </div>
+          <p class="tshirt_price">$199</p>
+        </div>
+      </div>
+      <div class="tshirt_card_1">
+        <img src="assets/image/BLA.avif" alt="">
+        <div class="infor">
+          <div class="information_div">
+            <h6 class="Grapic_design">Cotton T-Shirt </h6>
+            <h2 class="english_dep">Basic Heavy Weight T-Shirt</h2>
+          </div>
+          <p class="tshirt_price">$199</p>
+        </div>
+      </div>
+      <div class="tshirt_card_1">
+        <img src="assets/image/BLA.avif" alt="">
+        <div class="infor">
+          <div class="information_div">
+            <h6 class="Grapic_design">Cotton T-Shirt </h6>
+            <h2 class="english_dep">Basic Heavy Weight T-Shirt</h2>
+          </div>
+          <p class="tshirt_price">$199</p>
+        </div>
+      </div>
+    </div>
+    <div class="more">
+      <button>More</button>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </div>
+  <!-- .....seven section.... -->
+  <div class="heading_content">
+    <div class="headingitem">
+      <h1>OUR APPORCH TO FASHION DEDIGN</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Ipsam eligendi <br> odit modi tempore quasi! Nesciunt, tempora similique
+        esse eos amet <br> velit officiis quaerat ratione et? Suscipit, eveniet? <br> Fuga, est ducimus?</p>
+    </div>
+    <div class="shirt_product">
+      <div class="shirt_item">
+        <div class="shirt_card_1">
+          <img src="assets/image/Screenshot 2025-09-24 194432.png" alt="">
+        </div>
+        <div class="shirt_card_1" id="mid_img">
+          <img src="assets/image/59af8bdc-2ac6-43b8-b904-fb0dba55fc17.jpg" alt="">
+        </div>
+        <div class="shirt_card_1">
+          <img src="assets/image/75adf972-c221-4041-84d2-f254a3aa31fe.jpg" alt="">
+        </div>
+        <div class="shirt_card_1" id="mid_img">
+          <img src="assets/image/936fcc46-75eb-4395-bc75-e8f0e079b71e.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ....footer section... -->
+  <footer class="footer">
+    <div class="side_container-3">
+      <div class="languagediv">
+        <div class="title">INFO</div>
+        <div>PRICING /</div>
+        <div>ABOUT /</div>
+        <div>CONTACTS</div>
+      </div>
+      <div class="languagediv">
+        <div class="LANGUAGES">LANGUAGES</div>
+        <div>ENG /</div>
+        <div>ESP /</div>
+        <div>SVE</div>
+      </div>
+    </div>
+    <div class="content_item_div">
+      <div class="technologies">TECHNOLOGIES</div>
+      <div class="vr">VR</div>
+      <div class="xiv">XIV</div>
+      <div class="QR">QR</div>
+      <div class="communication">Near-field communication</div>
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  <script src="/assets/js/product.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+  <script>
+    let productSearch = document.getElementById("productSearch")
+    document.addEventListener("keypress", (e) => {
+      if (e.key == "Enter") {
+        window.location.href = `/pages/shop/index.html?q=${productSearch.value.trim()}`
+      }
+    })
+  </script>
+</body>
+</html>

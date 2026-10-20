@@ -1,0 +1,1183 @@
+body {
+  font-family: sans-serif;
+  background: #f8f8f8;
+  color: #111;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+   :root {
+      --toast-color: #40f467;
+      --toast-text: white;
+    }
+
+    #productSearch:-webkit-autofill,
+    #productSearch:-webkit-autofill:hover,
+    #productSearch:-webkit-autofill:focus,
+    #productSearch:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px rgb(223, 222, 222) inset !important;
+      -webkit-text-fill-color: #000 !important;
+      caret-color: #000 !important;
+    }
+
+    .sucess_modal {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background-color: white;
+      border-left: 8px solid var(--toast-color);
+      height: 95px;
+      width: 370px;
+      position: fixed;
+      border-radius: 10px;
+      top: 50px;
+      right: 0;
+      z-index: 10000000000;
+      transform: translateX(400px);
+      transition: transform 0.5s linear;
+    }
+
+    .sucess_modal.active {
+      transform: translateX(0);
+    }
+
+    .check_icon {
+      color: var(--toast-color);
+      font-size: 35px;
+      padding-left: 20px;
+    }
+
+    .sucess_head {
+      position: relative;
+    }
+
+    .cross_mark {
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: -25px;
+      color: rgb(63, 60, 60);
+    }
+
+    .sucess_changes {
+      font-size: 18px;
+    }
+
+    .sucess_changes>span {
+      color: rgb(63, 60, 60);
+    }
+
+    .progress {
+      width: 100%;
+      height: 3px;
+      background-color: var(--toast-color);
+      position: absolute;
+      bottom: 0;
+      transition: width 5.3s linear;
+    }
+
+    .sucess_modal.active .progress {
+      width: 0px;
+    }
+
+    .profile-container {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+
+    }
+
+    .user-id {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      height: 30vh;
+
+    }
+
+    .acount_main {
+      width: 240px;
+      background: #fff;
+      border-radius: 8px;
+      position: absolute;
+      top: 1px;
+      right: 20px;
+      padding: 20px;
+      text-align: left;
+      margin-top: 75px;
+      border: 1px solid gray;
+    }
+
+    .cross_icon {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cross_icon i {
+      cursor: pointer;
+    }
+
+    .cross_icon:hover {
+      color: rgb(245, 88, 88);
+    }
+
+    .hlo {
+      font-size: 17px;
+      color: rgb(22, 22, 22);
+      font-weight: 600;
+    }
+
+    .access {
+      font-size: 15px;
+      margin-top: 5px;
+      color: rgb(67, 66, 66);
+    }
+
+    .log-btn button {
+      width: 100%;
+      color: white;
+      background: #9c27b0;
+      height: 43px;
+      font-size: 17px;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .icon-lock {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: #333;
+      cursor: pointer;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+
+    /* .delete {
+    font-size: 15px;
+    color: #d32f2f;
+    cursor: pointer;
+    text-decoration: none;
+  } */
+
+    .my_profile2 {
+      position: fixed;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: all 0.3s ease-in-out;
+
+    }
+
+    .signup-modal {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 20px;
+
+    }
+
+    .signup-box {
+      background-color: #fff;
+      border: 1px solid gray;
+      padding: 10px 30px;
+      border-radius: 8px;
+
+      width: 100%;
+      position: relative;
+    }
+
+    .signup-box h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .form_item input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form_item button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5516ea;
+      font-size: 20px;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    .crossbtn {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .crossbtn:hover {
+      color: red;
+    }
+
+    .started p {
+      text-align: center;
+
+    }
+
+    .already p {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .google {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-top: 20px;
+    }
+
+    .google button {
+      width: 45%;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+    }
+
+    @media screen and (min-width:768px) {
+      .signup-box {
+
+        width: 70%;
+        position: relative;
+      }
+    }
+
+    .my_profile_login {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .signup-modal2 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 20px;
+
+    }
+
+    .signup-box2 {
+      background-color: #fff;
+      border: 1px solid gray;
+      /* margin: 10% auto; */
+      padding: 10px 30px;
+      border-radius: 8px;
+      width: 100%;
+      /* max-width: 400px; */
+      position: relative;
+    }
+
+    .signup-box2 h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .form_item2 input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form_item2 button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5516ea;
+      font-size: 20px;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    .cross_icon2 {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .started2 p {
+      text-align: center;
+    }
+
+    .already2 p {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .google2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-top: 20px;
+    }
+
+    .google2 button {
+      width: 45%;
+      border-radius: 5px;
+      font-size: 20px;
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+    }
+
+    @media screen and (min-width:768px) {
+      .signup-box2 {
+
+        width: 50%;
+        position: relative;
+      }
+
+    }
+
+    .profile-container {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+
+    }
+
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 40px;
+      border-bottom: 1px solid #eee;
+
+
+    }
+
+    .navbar_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .left-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+
+    .logo {
+      font-weight: 700;
+      font-size: 24px;
+      color: #000;
+    }
+
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      transition: all 0.3s ease-in-out;
+
+
+    }
+
+    .nav-links li a {
+      color: #000;
+      font-size: 16px;
+      text-decoration: none;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .nav-links.active li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-links li a:hover {
+      color: #007bff;
+    }
+
+    .login {
+      font-size: 20px;
+    }
+
+    .login a {
+      text-decoration: none;
+    }
+
+    .login-btn {
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        position: absolute;
+        top: 48px;
+        left: 10px;
+        padding: 10px 0;
+      }
+
+      @media screen and (width:320px) {
+        .nav-icons {
+          display: none;
+        }
+      }
+
+      .nav-links.active {
+        display: flex;
+         background: rgb(255, 255, 255);
+      border: 0.5px solid gray;
+      width: 85px;
+      border-radius: 8px;
+      text-align: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .left-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filter-group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+}
+
+.breadcrumb {
+  font-size: 14px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  color: #666;
+}
+
+.product_detail_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.wrapper {
+  display: flex;
+  padding: 10px;
+}
+
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 40px;
+}
+
+.sidebar h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.colordiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colordiv h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.colordiv i {
+  font-size: 22px;
+  color: rgb(95, 93, 93);
+}
+
+.main_color {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.allcolor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.color_row1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+}
+
+.color_row2 {
+  display: flex;
+  gap: 10px;
+}
+
+.allcolor2 {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 50%;
+
+}
+
+
+.size-buttons button {
+  padding: 8px 12px;
+  width: 50px;
+  height: 36px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgb(188, 185, 185);
+  background-color: white;
+  border-radius: 4px;
+}
+
+.color_active {
+  border: 2px solid gray !important;
+  outline: 2px dashed rgb(216, 9, 9);
+}
+
+.size_active {
+  background-color: #111 !important;
+  color: white !important;
+}
+
+/* ✅ Fix for color and size filter layout & visibility */
+/* #color_row1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 60px;
+}
+
+#color_row1 .allcolor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#size-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 40px;
+  margin-top: 5px;
+}
+
+#size-buttons button {
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+#size-buttons button.size_active {
+  background-color: #111 !important;
+  color: white !important;
+}
+
+.color_active {
+  border: 2px solid #000 !important;
+} */
+
+
+.product-area {
+  position: relative;
+  left: 10px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-header {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.checbox_div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+}
+
+.product-header h2 {
+  font-size: 24px;
+}
+
+.product-header input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.size-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.product-card {
+  width: 240px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.product-card .brand {
+  font-size: 14px;
+  color: #777;
+}
+
+.product-card .name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+
+.line {
+  height: 1px;
+  border: 0.5px solid rgb(204, 202, 202);
+}
+
+.second_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.images_div {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.search_container {
+  display: flex;
+  width: 245px;
+  height: 50px;
+  align-items: center;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgb(223, 222, 222);
+
+}
+
+.contnt_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.contnt_item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: gray;
+}
+
+
+.icon_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+
+
+
+
+
+}
+
+.icon_box i {
+  font-size: 18px;
+  color: #666;
+}
+
+.search_container input {
+  border: none;
+  background: rgb(223, 222, 222);
+  outline: none;
+  font-size: 16px;
+  text-align: right;
+  display: block;
+
+}
+
+.all_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.input_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 30%;
+}
+
+.input_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-bottom: 2px;
+  height: 27px;
+}
+
+.show_product span {
+  text-align: center;
+}
+
+.content {
+  font-size: 22px;
+}
+
+
+.input_row input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tshirt_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.tshirt_card {
+  width: 250px;
+  border-radius: 6px;
+
+}
+
+.tshirt_card img {
+  width: 100%;
+  height: auto;
+
+}
+
+.Grapic_design {
+  color: rgb(33, 29, 29);
+  font-size: 11px;
+  padding: 2px;
+}
+
+.t-shirt_selling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.information {
+  gap: 5px;
+  position: relative;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  width: 100%;
+  padding: 10px;
+}
+
+.english_dep {
+  font-size: 12px;
+  font-weight: 700;
+  color: #555;
+  margin-top: 5px;
+}
+
+.images_section {
+  display: flex;
+  width: 250px;
+  cursor: pointer;
+  height: 290px;
+  border: 1px solid gray;
+}
+
+.basic {
+  display: flex;
+}
+
+.prices_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 5px;
+}
+
+.privious_next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privious_product,
+.next_product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+  border: 1.5px solid gray;
+  height: 40px;
+  width: 125px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product_no {
+  font-size: 20px;
+  gap: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.fst_product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(254 252 252);
+  border: 0.5px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 27px;
+  height: 30px;
+}
+
+.privious_anchor,
+.next_anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.pageNumber.active {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+
+
+
+.fst_product:hover {
+  color: white;
+  background-color: #111;
+}
+
+.privious_product:hover,
+.next_product:hover {
+
+  .privious_icon,
+  .next_icon {
+    color: white;
+  }
+
+  /* .privious_anchor:hover,.next_anchor:hover{
+    color: rgb(210, 207, 207);
+  
+  } */
+}
+
+
+
+#loader {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .product-area {
+    left: 0;
+  }
+
+  .input_wrapper {
+    flex-direction: column;
+    gap: 10px;
+    top: 0;
+  }
+
+  .input_row {
+    flex-wrap: wrap;
+  }
+
+  .search_container {
+    width: 100%;
+  }
+
+  .tshirt_item {
+    justify-content: center;
+  }
+
+  .product-card, .tshirt_card {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    top: 0;
+    margin-bottom: 15px;
+  }
+
+  .product-area {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .input_wrapper {
+    flex-direction: column;
+    top: 0;
+  }
+
+  .input_row {
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+  }
+
+  .search_container {
+    width: 100%;
+    height: 45px;
+  }
+
+  .tshirt_item {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .product-card, .tshirt_card {
+    width: 90%;
+  }
+
+  .privious_next {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .sidebar h1, .colordiv h3, .product-header h2 {
+    font-size: 18px;
+  }
+
+  .size-buttons button {
+    width: 40px;
+    height: 32px;
+    padding: 6px 10px;
+  }
+
+  .input_row input {
+    width: 100%;
+  }
+
+  .search_container input {
+    font-size: 14px;
+  }
+
+  .product-no {
+    font-size: 16px;
+  }
+
+  .privious_product, .next_product {
+    width: 100%;
+    font-size: 16px;
+    height: 35px;
+  }
+}

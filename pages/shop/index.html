@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="/assets/css/navbar/style.css">
+  <link rel="stylesheet" href="/assets/css/shop/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="sucess_modal" id="sucess_modal">
+    <div class="check_icon">
+      <i class="fa-solid check"></i>
+
+    </div>
+    <div class="sucess_changes">
+      <div class="sucess_head">
+        <h2 id="success">Success</h2>
+        <i class="fa-solid fa-xmark cross_mark" id="cross_mark"></i>
+      </div>
+      <span id="mess_saved">Your changes has been saved </span>
+    </div>
+    <div class="progress"></div>
+  </div>
+
+
+
+  <div class="profile-container" style="height: 70px;">
+    <nav class="navbar">
+      <div class="navbar_container">
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="bandage">
+          <div class="logo">Bandage</div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+         
+          <li><a href="/pages/product/index.html">product</a></li>
+        </ul>
+        <div class="nav-icons">
+          <div class="search_icon">
+            <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            <input class="search-input  " placeholder="Search..." type="text" id="productSearchbar"
+              style="display: none;">
+          </div>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-user" id="profilepic" style="cursor: pointer;"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ....signup.... -->
+
+    <div class="my_profile" id="my_profile" style="visibility: hidden; opacity: 0;">
+      <div class="main_sctn" id="main_sctn" style=" transform: translateY(-50px);">
+        <div class="user-id">
+          <div class="acount_main" id="acount_main">
+            <div class="user" id="profilediv">
+              <div class="cross_icon">
+                <h6 id="loginusername" class="hlo">Hello User</h6>
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <p class="access">To access you account</p>
+            </div>
+            <div class="log-btn" id="log_btn" data-action="login">
+              <button id="signup">login</button>
+            </div>
+
+            <!-- <div class="delete">
+              <p>Delete Account</p>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .....signup form..... -->
+
+    
+    <div class="my_profile2" id="my_profile2" style="visibility: hidden; opacity: 0;  pointer-events:none;">
+      <div class="main_sctn" id="main_sctn" style=" transform: translateY(-50px);">
+        <div class="signup-modal" id="signupModal">
+          <div class="signup-box" id="signupbox">
+            <span class="crossbtn" id="crossSignup"> <i class="fa-solid fa-xmark"></i></span>
+            <div class="started">
+              <h2>creat account</h2>
+              <p>join us and get started</p>
+            </div>
+            <form id="loginup_form">
+              <div class="form_item">
+                <input type="text" placeholder="Email" id="Username">
+                <input type="password" placeholder="Password" id="Password">
+                <div class="log_btn" id="log_btn" data-action="login">
+                  <button type="submit">login</button>
+                </div>
+                <div class="already">
+                  <p>already have an account? <a id="loginLink" style="text-decoration: none;" href="">sign in</a>
+                  </p>
+                </div>
+                <div class="google">
+                  <button>google</button>
+                  <button>facebook</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my_profile_login" id="signUp_modal" style="visibility: hidden; opacity: 0;">
+      <div class="main_sctn">
+        <div class="signup-modal2" id="signupModal2">
+          <div class="signup-box2" id="signupbox">
+            <span class="cross_icon2" id="closeSignup"> <i class="fa-solid fa-xmark"></i></span>
+            <div class="started2">
+              <h2>create account</h2>
+              <p>join us and get started</p>
+            </div>
+            <form id="signup_form">
+              <div class="form_item2">
+                <!-- <input type="text" placeholder="Full Name" id="loginname"> -->
+                <input type="text" placeholder="Full Name" id="Full_Name">
+                <input type="email" placeholder="Email" id="loginemail">
+                <input type="password" placeholder="Password" id="loginpassword">
+                <button type="submit">sign</button>
+                <div class="already2">
+                  <p>already have an account? <a id="Signuplink" style="text-decoration: none;" href="">login in</a></p>
+                </div>
+                <div class="google2">
+                  <button>google</button>
+                  <button>facebook</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loader" style="display:none; position:fixed; ">
+      <div class="loader-dots">
+        <div class="dot" style="animation-delay: 0s"></div>
+        <div class="dot" style="animation-delay: 0.1s"></div>
+        <div class="dot" style="animation-delay: 0.2s"></div>
+        <div class="dot" style="animation-delay: 0.3s"></div>
+        <div class="dot" style="animation-delay: 0.4s"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="colordiv">
+        <h1>Price</h1>
+        <i class="fa-solid fa-angle-up"></i>
+      </div>
+      <input type="range" />
+      <div class="line"></div>
+
+      <div class="filter-group">
+        <div class="colordiv">
+          <h3>Colors</h3>
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <div class="main_color">
+          <div class="color_row1" id="color_row1"></div>
+
+
+        </div>
+        <div class="line"></div>
+
+        <div class="colordiv">
+          <h3>Size</h3>
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <!-- <div class="size-buttons" id="size-buttons"></div> -->
+        <div class="size-buttons" id="size-buttons"></div>
+
+        <div class="line"></div>
+      </div>
+
+      <div class="filter-group2">
+        <p class="filter-title">Availability</p>
+        <div class="checbox_div">
+          <label><input type="checkbox" /> In Stock</label><br />
+          <label><input type="checkbox" /> Out of Stock</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Area -->
+    <div class="product-area">
+      <div class="all_content">
+        <div class="product-header">
+          <div class="breadcrumb">Home / Products</div>
+          <div class="product_detail_div">
+            <h2>PRODUCTS</h2>
+          </div>
+          <div class="search_container">
+            <div class="icon_box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" id="productSearch" placeholder="Search products..." />
+          </div>
+        </div>
+        
+        <div class="input_wrapper">
+        <div>
+            <div class="input_row">
+            <input type="text" placeholder="NEW" style="text-align: center; width: 110px;" />
+            <input type="text" placeholder="SHIRTS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="POLO SHIRTS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="SHORTS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="JEANS" style="text-align: center; width: 110px" />
+          </div>
+
+          <div class="input_row">
+            <input type="text" placeholder="BEST SELLERS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="T-SHIRT" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="JACKETS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="COATS" style="text-align: center; width: 110px" />
+            <input type="text" placeholder="TRACK SUITS" style="text-align: center; width: 110px" />
+          </div>
+        </div>
+           <div id="totalproduct"class="show_product">
+         
+        </div>
+        </div>
+      </div>
+
+      <!-- Product Container -->
+      <div class="tshirt_item" id="productConatiner"></div>
+
+      <!-- Pagination -->
+      <div class="privious_next">
+        <div class="privious_product" id="privious">
+          <div class="privious_icon">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <a class="privious_anchor">Previous</a>
+        </div>
+
+        <div class="product_no" id="productpageno"></div>
+
+        <div class="next_product" id="next">
+          <a class="next_anchor">Next</a>
+          <div class="next_icon">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+ <!-- <script src="/assets/js/detail.js"></script> -->
+  <script src="/assets/js/product.js"></script>
+  <script src="/assets/js/shop.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+ 
+
+</body>
+
+</html>
